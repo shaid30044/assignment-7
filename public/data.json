@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "img": "https://i.ibb.co/p28CJby/Why-study-computer-science.jpg",
+    "course_name": "Introduction to Computer Science",
+    "course_description": "A course that covers the fundamentals of computer science and programming.",
+    "price": 199,
+    "credit": 3
+  },
+  {
+    "id": 2,
+    "img": "https://i.ibb.co/KsthG5K/4-programming-languages-you-must-master-for-game-development.jpg",
+    "course_name": "Computer Graphics and Game Development",
+    "course_description": "Create 2D and 3D graphics and develop your own video games.",
+    "price": 249.99,
+    "credit": 4
+  },
+  {
+    "id": 3,
+    "img": "https://i.ibb.co/8KRXtCz/data-img.jpg",
+    "course_name": "Data Science and Machine Learning",
+    "course_description": "Explore the world of data analysis, machine learning, and predictive modeling.",
+    "price": 249,
+    "credit": 4
+  },
+  {
+    "id": 4,
+    "img": "https://i.ibb.co/2tD9Gw1/24298793-G.jpg",
+    "course_name": "Cybersecurity Fundamentals",
+    "course_description": "Learn the essentials of cybersecurity, including threat detection and prevention.",
+    "price": 199,
+    "credit": 8
+  },
+  {
+    "id": 5,
+    "img": "https://i.ibb.co/PZfykSg/1644586923.jpg",
+    "course_name": "Database Management",
+    "course_description": "Master the art of database design, implementation, and administration.",
+    "price": 149,
+    "credit": 6
+  },
+  {
+    "id": 6,
+    "img": "https://i.ibb.co/V272TtX/Network-Security-159.jpg",
+    "course_name": "Network Administration",
+    "course_description": "Become proficient in setting up and managing computer networks.",
+    "price": 199,
+    "credit": 6
+  },
+  {
+    "id": 7,
+    "img": "https://i.ibb.co/c2mqsQN/the-complete-guide-to-mobile-app-development-2021-ded2abd1b1.pngs",
+    "course_name": "Mobile App Development",
+    "course_description": "Create mobile apps for iOS and Android platforms using popular frameworks.",
+    "price": 249,
+    "credit": 4
+  },
+  {
+    "id": 8,
+    "img": "https://i.ibb.co/nfjC7jW/Becoming-A-Software-Engineer.jpg",
+    "course_name": "Software Engineering",
+    "course_description": "Learn the principles of software development and project management.",
+    "price": 299,
+    "credit": 9
+  },
+  {
+    "id": 9,
+    "img": "https://i.ibb.co/TY0zv0n/maxresdefault.jpg",
+    "course_name": "Cloud Computing and AWS",
+    "course_description": "Explore cloud computing technologies and AWS services.",
+    "price": 199,
+    "credit": 3
+  },
+  {
+    "id": 10,
+    "img": "https://i.ibb.co/8Yvbz9n/maxresdefault.jpg",
+    "course_name": "Linux System Administration",
+    "course_description": "Master the Linux operating system and server administration.",
+    "price": 199.99,
+    "credit": 3
+  },
+  {
+    "id": 11,
+    "img": "https://i.ibb.co/sFtBS8H/Screenshot-1.png",
+    "course_name": "Front-End Web Development",
+    "course_description": "Master HTML, CSS, and JavaScript for building interactive web applications.",
+    "price": 199,
+    "credit": 1
+  },
+  {
+    "id": 12,
+    "img": "https://i.ibb.co/HzXCXgh/What-Is-Back-End-Development.webp",
+    "course_name": "Back-End Web Development",
+    "course_description": "Learn server-side programming and database integration for web applications.",
+    "price": 199,
+    "credit": 3
+  },
+  {
+    "id": 13,
+    "img": "https://i.ibb.co/Ny17qkC/recruitment-web-vertical-banner-concept-full-stack-developer-needed-young-man-working-on-laptop-in-o.jpg",
+    "course_name": "Full-Stack Web Development",
+    "course_description": "Combine front-end and back-end skills to become a full-stack developer.",
+    "price": 299,
+    "credit": 2
+  },
+  {
+    "id": 14,
+    "img": "https://i.ibb.co/BZsbCfN/maxresdefault.jpg",
+    "course_name": "Blockchain and Cryptocurrency",
+    "course_description": "Explore cryptocurrencies and blockchain applications.",
+    "price": 249.99,
+    "credit": 4
+  },
+  {
+    "id": 15,
+    "img": "https://i.ibb.co/PChn5hs/Automation-VS-Robotics.jpg",
+    "course_name": "Robotics and Automation",
+    "course_description": "Explore the field of robotics and automation in various industries.",
+    "price": 249.99,
+    "credit": 4
+  }
+]
