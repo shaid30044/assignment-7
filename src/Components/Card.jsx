@@ -1,4 +1,4 @@
-const Card = ({ card }) => {
+const Card = ({ card, handleSelect }) => {
   const { id, img, course_name, course_description, price, credit } = card;
 
   return (
@@ -18,7 +18,10 @@ const Card = ({ card }) => {
           <p>Credit : {credit}hr</p>
         </div>
       </div>
-      <button className="btn btn-ghost bg-[#2F80ED] hover:bg-[#2470d3] normal-case text-lg font-semibold text-white w-full">
+      <button
+        onClick={() => handleSelect(card)}
+        className="btn btn-ghost bg-[#2F80ED] hover:bg-[#2470d3] normal-case text-lg font-semibold text-white w-full"
+      >
         Select
       </button>
     </div>
