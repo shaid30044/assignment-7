@@ -1,25 +1,30 @@
-const Card = ({ card, handleSelect }) => {
+import { BiDollar } from "react-icons/bi";
+import { BsBook } from "react-icons/bs";
+
+const Card = ({ card, handleSelected }) => {
   const { id, img, course_name, course_description, price, credit } = card;
 
   return (
     <div className="bg-white rounded-xl p-4">
       <img
-        className="rounded-xl w-full h-44 md:h-60 lg:h-44"
+        className="rounded-lg w-full h-44 md:h-60 lg:h-44"
         src={img}
         alt=""
       />
       <h1 className="text-lg font-semibold color-1 pt-4 pb-3">{course_name}</h1>
       <p className="text-sm color-3">{course_description}</p>
       <div className="flex justify-between items-center font-medium color-3 pt-4 pb-6">
-        <div>
+        <div className="flex items-center gap-2">
+          <BiDollar className="text-xl color-1"></BiDollar>
           <p>Price : ${price}</p>
         </div>
-        <div>
+        <div className="flex items-center gap-2">
+          <BsBook className="text-lg color-1"></BsBook>
           <p>Credit : {credit}hr</p>
         </div>
       </div>
       <button
-        onClick={() => handleSelect(card)}
+        onClick={() => handleSelected(card)}
         className="btn btn-ghost bg-[#2F80ED] hover:bg-[#2470d3] normal-case text-lg font-semibold text-white w-full"
       >
         Select
