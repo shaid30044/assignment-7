@@ -7,29 +7,37 @@ function App() {
   const [selectedCourse, setSelectedCourse] = useState([]);
   const [totalCredit, setTotalCredit] = useState(0);
   const [remaining, setRemaining] = useState(20);
+  const [totalPrice, setTotalPrice] = useState(0);
 
   const handleSelected = (card, id) => {
     const isExist = selectedCourse.find((item) => item.id == id);
 
-    let count = card.credit;
+    let credit = card.credit;
 
     if (isExist) {
       return alert("Already taken!");
     } else {
       selectedCourse.forEach((item) => {
-        count += item.credit;
+        credit += item.credit;
       });
 
-      const totalRemaining = 20 - count;
+      const totalRemaining = 20 - credit;
 
-      if (count > 20) {
+      if (credit > 20) {
         return alert("Credit over!");
       }
+
       setRemaining(totalRemaining);
 
-      setTotalCredit(count);
+      setTotalPrice(totalPrice + card.price);
+
+      setTotalCredit(credit);
 
       setSelectedCourse([...selectedCourse, card]);
+
+      if (totalRemaining == 0) {
+        return alert("Remaining credit is 0!");
+      }
     }
   };
 
@@ -47,6 +55,7 @@ function App() {
             selectedCourse={selectedCourse}
             totalCredit={totalCredit}
             remaining={remaining}
+            totalPrice={totalPrice}
           ></Carts>
         </div>
       </div>

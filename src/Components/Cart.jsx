@@ -1,11 +1,7 @@
 const Cart = ({ card }) => {
   const { course_name } = card;
 
-  return (
-    <div className="color-2 space-y-2 py-6">
-      <li>{course_name}</li>
-    </div>
-  );
+  return <li className="color-2 py-1">{course_name}</li>;
 };
 
 export default Cart;
