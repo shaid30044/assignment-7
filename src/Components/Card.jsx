@@ -1,5 +1,6 @@
 import { BiDollar } from "react-icons/bi";
 import { BsBook } from "react-icons/bs";
+import PropTypes from "prop-types";
 
 const Card = ({ card, handleSelected }) => {
   const { id, img, course_name, course_description, price, credit } = card;
@@ -15,11 +16,11 @@ const Card = ({ card, handleSelected }) => {
       <p className="text-sm color-3">{course_description}</p>
       <div className="flex justify-between items-center font-medium color-3 pt-4 pb-6">
         <div className="flex items-center gap-2">
-          <BiDollar className="text-xl color-1"></BiDollar>
+          <BiDollar className="text-lg color-1"></BiDollar>
           <p>Price : ${price}</p>
         </div>
         <div className="flex items-center gap-2">
-          <BsBook className="text-lg color-1"></BsBook>
+          <BsBook className="text- color-1"></BsBook>
           <p>Credit : {credit}hr</p>
         </div>
       </div>
@@ -31,6 +32,11 @@ const Card = ({ card, handleSelected }) => {
       </button>
     </div>
   );
+};
+
+Card.propTypes = {
+  card: PropTypes.object.isRequired,
+  handleSelected: PropTypes.func.isRequired,
 };
 
 export default Card;
