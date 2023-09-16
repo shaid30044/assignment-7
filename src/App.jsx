@@ -2,6 +2,8 @@ import { useState } from "react";
 import "./App.css";
 import Cards from "./Components/Cards";
 import Carts from "./Components/Carts";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   const [selectedCourse, setSelectedCourse] = useState([]);
@@ -15,7 +17,7 @@ function App() {
     let credit = card.credit;
 
     if (isExist) {
-      return alert("Already taken!");
+      return toast.error("Course is already taken!");
     } else {
       selectedCourse.forEach((item) => {
         credit += item.credit;
@@ -24,7 +26,7 @@ function App() {
       const totalRemaining = 20 - credit;
 
       if (credit > 20) {
-        return alert("Credit over!");
+        return toast.error("Credit hour limit exceeded!");
       }
 
       setRemaining(totalRemaining);
@@ -35,8 +37,8 @@ function App() {
 
       setSelectedCourse([...selectedCourse, card]);
 
-      if (totalRemaining == 0) {
-        return alert("Remaining credit is 0!");
+      if (totalRemaining === 0) {
+        return toast.warning("Remaining credit hour is 0!");
       }
     }
   };
@@ -59,6 +61,7 @@ function App() {
           ></Carts>
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 }
