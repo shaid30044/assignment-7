@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 const Cart = ({ card }) => {
   const { course_name } = card;
 
-  return <li className="color-2 py-1">{course_name}</li>;
+  return <li className="color-2 py-1 list-decimal">{course_name}</li>;
 };
 
 Cart.propTypes = {
