@@ -4,10 +4,33 @@ import Cards from "./Components/Cards";
 import Carts from "./Components/Carts";
 
 function App() {
-  const [selectCourse, setSelectCourse] = useState([]);
+  const [selectedCourse, setSelectedCourse] = useState([]);
+  const [totalCredit, setTotalCredit] = useState(0);
+  const [remaining, setRemaining] = useState(20);
 
-  const handleSelected = (card) => {
-    console.log(card);
+  const handleSelected = (card, id) => {
+    const isExist = selectedCourse.find((item) => item.id == id);
+
+    let count = card.credit;
+
+    if (isExist) {
+      return alert("Already taken!");
+    } else {
+      selectedCourse.forEach((item) => {
+        count += item.credit;
+      });
+
+      const totalRemaining = 20 - count;
+
+      if (count > 20) {
+        return alert("Credit over!");
+      }
+      setRemaining(totalRemaining);
+
+      setTotalCredit(count);
+
+      setSelectedCourse([...selectedCourse, card]);
+    }
   };
 
   return (
@@ -20,7 +43,11 @@ function App() {
           <Cards handleSelected={handleSelected}></Cards>
         </div>
         <div className="md:w-1/3 lg:w-1/4 pt-10 md:pt-0">
-          <Carts></Carts>
+          <Carts
+            selectedCourse={selectedCourse}
+            totalCredit={totalCredit}
+            remaining={remaining}
+          ></Carts>
         </div>
       </div>
     </div>
